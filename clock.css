@@ -1,0 +1,112 @@
+html {
+    background: #282828;
+    font-size: 62.5%;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    border: 7px solid #282828;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 12.5% auto;
+}
+
+.clockFace {
+    background: #282828;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.clockFace::after,
+.clockFace::before,
+.marking {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: #1df52f;
+    position: absolute;
+    z-index: 0;
+    left: 49%;
+}
+
+.clockFace::after {
+    transform: rotate(90deg);
+}
+
+.marking {
+    background: #bdbdcb;
+    width: 3px;
+}
+
+.marking1 {
+    transform: rotate(30deg);
+}
+
+.marking2 {
+    transform: rotate(60deg);
+}
+
+.marking3 {
+    transform: rotate(120deg);
+}
+
+.marking4 {
+    transform: rotate(150deg);
+}
+
+.clockCircle {
+    position: absolute;
+    background: #282828;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.clockCircle::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background: #4d4b63;
+    top: 47%;
+    left: 47%;
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    top: 49%;
+    right: 50.3%;
+    background: #61afff;
+    width: 50%;
+    height: 5px;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hourHand {
+    width: 30%;
+    background: #1df52f;
+}
+
+.minuteHand {
+    width: 40%;
+    height: 3px;
+    z-index: 2;
+    background: #333;
+}
+
+.secondsHand {
+    width: 45%;
+    height: 2px;
+    background: #ee791a;
+}
